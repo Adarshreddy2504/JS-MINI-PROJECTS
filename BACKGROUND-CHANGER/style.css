@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.box{
+    height:200px;
+    width:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    border-radius:30px;
+    color: white;
+}
+#red{
+    background-color: #c1121f;
+}
+#red:hover{
+    background-color:rgb(158, 35, 35);
+}
+#blue{
+    background-color:#219ebc;
+}
+#blue:hover{
+    background-color:rgb(23, 99, 125);
+}
+#orange{
+    background-color: #fb8500;
+}
+#orange:hover{
+    background-color:rgb(153, 105, 18);
+}
+#green{
+    background-color:#a7c957;
+}
+#green:hover{
+    background-color:rgb(93, 129, 40);
+}
+#pink{
+    background-color: #ffafcc;
+}
+#pink:hover{
+    background-color: rgb(185, 85, 100);
+}
+#purple{
+    background-color: purple;
+}
+#purple:hover{
+    background-color:rgb(73, 26, 73);
+}
+#yellow{
+    background-color: #ffd60a;
+}
+#yellow:hover{
+    background-color:rgb(138, 138, 37);
+}
+#violet{
+    background-color:#8338ec;
+}
+#violet:hover{
+    background-color: rgb(133, 50, 133);
+}
