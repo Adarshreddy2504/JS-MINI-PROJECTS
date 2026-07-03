@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container{
+    background-color: #1e1b4b;
+    box-shadow:0 15px 35px rgba(0,0,0,0.4),0 0 25px rgba(139,92,246,0.15);
+    border-radius: 24px;
+    padding: 24px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    color: #f8fafc;
+    text-shadow: 0 0 10px rgba(167,139,250,0.4);
+    margin-bottom: 24px;
+    font-size: 2rem;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+input{
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #4f46e5;
+    background-color: #312e81;
+    color: #f8fafc;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input::placeholder{
+    color: #cbd5e1;
+}
+
+input:focus{
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow:0 0 0 3px rgba(139,92,246,0.2);
+}
+
+button{
+    padding: 12px;
+    background: linear-gradient(135deg,#7c3aed,#6366f1);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow:0 6px 15px rgba(124,58,237,0.3),0 0 10px rgba(99,102,241,0.2);
+}
+
+button:hover{
+    transform: translateY(-2px);
+    box-shadow:0 10px 20px rgba(124,58,237,0.4),0 0 20px rgba(139,92,246,0.3);
+}
+
+#bookmark-list{
+    list-style: none;
+    padding: 0;
+}
+
+#bookmark-list li{
+    background-color: #312e81;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25),0 0 10px rgba(99,102,241,0.15);
+    transition: all 0.3s ease;
+}
+
+#bookmark-list li:hover{
+    transform: translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.35),0 0 15px rgba(139,92,246,0.2);
+}
+
+#bookmark-list a{
+    color: #c4b5fd;
+    text-decoration: none;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 250px;
+}
+
+#bookmark-list a:hover{
+    color: #ddd6fe;
+}
+
+#bookmark-list button{
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#bookmark-list button:hover{
+    background-color: #ef4444;
+    transform: scale(1.05);
+}
+
+@media(max-width: 480px){
+    .container{
+        padding: 20px;
+    }
+
+    h1{
+        font-size: 1.7rem;
+    }
+
+    #bookmark-list li{
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    #bookmark-list a{
+        max-width: 100%;
+    }
+
+    #bookmark-list button{
+        margin-left: 0;
+    }
+}
