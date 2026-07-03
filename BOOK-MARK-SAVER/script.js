@@ -25,6 +25,10 @@ addBookmarkBtn.addEventListener("click", () => {
 
 function addBookmark(name, url) {
     const li = document.createElement("li");
+    const favicon = document.createElement("img");
+    favicon.src = `https://www.google.com/s2/favicons?domain=${url}&sz=64`;
+    favicon.alt = "favicon";
+    favicon.classList.add("favicon");
 
     const link = document.createElement("a");
     link.href = url;
@@ -34,11 +38,12 @@ function addBookmark(name, url) {
     const removeBtn = document.createElement("button");
     removeBtn.textContent = "Remove";
 
-    removeBtn.addEventListener("click",()=>{
+    removeBtn.addEventListener("click", () => {
         bookmarkList.removeChild(li);
         removeBookmarkFromStorage(name, url);
     });
 
+    li.appendChild(favicon);
     li.appendChild(link);
     li.appendChild(removeBtn);
     bookmarkList.appendChild(li);
