@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Cards</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Choose Your Plan</h1>
+            <p>Select the perfect pricing plan for your needs</p>
+        </header>
+
+        <div class="billing-toggle">
+             <span>Monthly</span>
+            <label class="switch">
+                <input type="checkbox" id="billing-toggle">
+                <span class="slider"></span>
+            </label>
+            <span>Yearly</span>
+        </div>
+
+        <div class="pricing-cards">
+
+            <!-- Basic Plan -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="plan-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Basic</h3>
+                    <div class="price">
+                        <span class="currency">₹</span>
+                        <span class="amount" id="basic-price">499</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="description">Perfect for individuals and small projects</p>
+                </div>
+
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> 5 Projects</li>
+                    <li><i class="fas fa-check"></i> 10 GB Storage</li>
+                    <li><i class="fas fa-check"></i> Email Support</li>
+                    <li><i class="fas fa-check"></i> Basic Analytics</li>
+                    <li><i class="fas fa-times"></i> Custom Domain</li>
+                </ul>
+                <button class="plan-btn">Get Started</button>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="card featured">
+                <div class="popular-badge">
+                    Most Popular
+                </div>
+                <div class="card-header">
+                    <div class="plan-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <h3>Pro</h3>
+                   <div class="price">
+                        <span class="currency">₹</span>
+                        <span class="amount" id="pro-price">999</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="description">Best for professionals and growing teams</p>
+                </div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Unlimited Projects</li>
+                    <li><i class="fas fa-check"></i> 100 GB Storage</li>
+                    <li><i class="fas fa-check"></i> Priority Support</li>
+                    <li><i class="fas fa-check"></i> Advanced Analytics</li>
+                    <li><i class="fas fa-check"></i> Custom Domain</li>
+                </ul>
+                <button class="plan-btn">Choose Pro</button>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="plan-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Enterprise</h3>
+
+                    <div class="price">
+                        <span class="currency">₹</span>
+                        <span class="amount" id="enterprise-price">2499</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="description">Designed for large organizations and businesses</p>
+                </div>
+
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Unlimited Everything</li>
+                    <li><i class="fas fa-check"></i> 1 TB Storage</li>
+                    <li><i class="fas fa-check"></i> Dedicated Support</li>
+                    <li><i class="fas fa-check"></i> Advanced Security</li>
+                    <li><i class="fas fa-check"></i> Team Management</li>
+                </ul>
+                <button class="plan-btn">Contact Sales</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
