@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f9b8e 0%, #1fc8a3 50%, #0d7377 100%);
+    color: #222;
+}
+
+header {
+    text-align: center;
+    padding: 70px 20px 40px;
+    color: #ffffff;
+}
+
+header h1{
+    margin: 0 0 12px;
+    font-size:2.6rem;
+    font-weight:800;
+    letter-spacing:0.5px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+header p{
+    margin:0;
+    font-size: 1.05rem;
+    color: #e0fff8;
+}
+
+.search-container{
+    display:flex;
+    justify-content: center;
+    padding:20px 20px 0;
+}
+
+#search-player{
+    width:100%;
+    max-width:360px;
+    padding: 12px 18px;
+    font-size:0.95rem;
+    border:none;
+    border-radius: 30px;
+    outline:none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+#search-player:focus{
+    box-shadow: 0 0 0 3px #ff6b6b;
+}
+
+.player-count{
+    text-align: center;
+    margin-top: 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.player-count span{
+  display:inline-block;
+  margin-left:6px;
+  padding:2px 12px;
+  background-color: #ff6b6b;
+  border-radius:20px;
+  color: #ffffff;
+}
+
+.team-grid{
+    max-width:1100px;
+    margin: 0 auto;
+    padding: 30px 24px 70px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap:26px;
+}
+
+.card{
+    position:relative;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow:hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover{
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:0 16px 30px rgba(0, 0, 0, 0.3);
+}
+
+.favorite-btn{
+    position:absolute;
+    top: 14px;
+    right:14px;
+    z-index:5;
+    width:34px;
+    height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #ff6b6b;
+    cursor:pointer;
+    transition:transform 0.2s ease, background-color 0.2s ease;
+}
+
+.favorite-btn:hover{
+    transform:scale(1.15);
+    background-color:#ffffff;
+}
+
+.favorite-btn.active{
+    background-color:#ff6b6b;
+    color: #ffffff;
+}
+
+.card-top{
+    text-align:center;
+    padding: 30px 16px 18px;
+    background:linear-gradient(135deg, #ff6b6b, #ffa36c);
+}
+
+.profile-bg{
+    display: none;
+}
+
+.profile-img{
+    width:92px;
+    height:92px;
+    margin: 0 auto 12px;
+    border-radius:50%;
+    overflow:hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.profile-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  background-color: #ffe3d2;
+}
+
+.card-top h3{
+    margin: 0 0 6px;
+    font-size:1.15rem;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.role{
+    display:inline-block;
+    margin: 0;
+    padding: 4px 14px;
+    font-size:0.75rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.6px;
+    color: #ff6b6b;
+    background-color: #ffffff;
+    border-radius:20px;
+}
+
+.card-bottom{
+    padding: 20px 18px 24px;
+    text-align:center;
+}
+
+.bio{
+    margin:0 0 16px;
+    font-size:0.9rem;
+    line-height:1.5;
+    color: #555555;
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    gap:10px;
+}
+
+.social-icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#0f9b8e,#1fc8a3);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-icon:hover{
+    transform:translateY(-3px);
+    box-shadow: 0 6px 14px rgba(15, 155, 142, 0.5);
+}
+
+@media(max-width: 480px){
+    header{
+    padding: 48px 16px 32px;
+    }
+    header h1{
+    font-size: 2rem;
+    }
+    .team-grid{
+    padding: 24px 16px 40px;
+    gap: 18px;
+    }
+}
