@@ -1,0 +1,254 @@
+/* ==========================================================================
+   Recipe Finder — styles
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background-color: #fff8f0;
+  color: #3a2b23;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 20px 80px;
+}
+
+/* ---------- Header ---------- */
+
+header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  color: #d64526;
+}
+
+header h1 i {
+  margin-right: 10px;
+  color: #f2994a;
+}
+
+header p {
+  color: #7a5c4f;
+  font-size: 0.95rem;
+}
+
+.api-link {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #a08776;
+  margin-bottom: 28px;
+}
+
+.api-link a {
+  color: #d64526;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.api-link a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Search bar ---------- */
+
+.search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+#search-input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid #e8d5c4;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #3a2b23;
+  outline: none;
+}
+
+#search-input:focus {
+  border-color: #f2994a;
+  box-shadow: 0 0 0 3px rgba(242, 153, 74, 0.25);
+}
+
+#search-btn {
+  padding: 0 26px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #d64526;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  background-color: #b7381d;
+}
+
+/* ---------- Error message ---------- */
+
+#error-container {
+  text-align: center;
+  padding: 18px;
+  margin-bottom: 24px;
+  background-color: #fdecea;
+  border: 1px solid #f5b7ae;
+  border-radius: 8px;
+  color: #c0392b;
+}
+
+/* ---------- Result heading ---------- */
+
+#result-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #3a2b23;
+}
+
+/* ---------- Meals grid ---------- */
+
+.meals-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.meal {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meal:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
+}
+
+.meal img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.meal-info {
+  padding: 14px 16px;
+}
+
+.meal-info h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.meal-category {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #f2994a;
+  border-radius: 20px;
+}
+
+/* ---------- Meal detail view ---------- */
+
+#meals-details {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 26px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #d64526;
+  background-color: #fff2ea;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#back-btn:hover {
+  background-color: #ffe4d4;
+}
+
+.meal-detail-content img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.meal-detail-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.meal-detail-content h3 {
+  font-size: 1.1rem;
+  margin: 20px 0 10px;
+  color: #d64526;
+}
+
+.meal-detail-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.meal-detail-content li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f1e5da;
+  font-size: 0.9rem;
+}
+
+.meal-detail-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #5a463b;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 32px 16px 60px;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+}
