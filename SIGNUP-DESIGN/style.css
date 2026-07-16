@@ -1,0 +1,165 @@
+/* 1. Global Reset & Font */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Vibrant Gradient Page Background */
+body {
+    /* A stunning, warm, energetic gradient background */
+    background: linear-gradient(135deg, #f953c6, #b91d73, #6a11cb, #2575fc);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite; /* Smooth background movement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Background Animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 3. The Signup Card (Modern Glass/White look with colorful shadow) */
+.signup-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    max-width: 400px;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 20px;
+    /* A subtle glowing shadow that matches the background */
+    box-shadow: 0 15px 35px rgba(106, 17, 203, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on the card */
+.signup-container:hover {
+    transform: translateY(-5px);
+}
+
+/* 4. Top Envelope Icon Container */
+.icon-container {
+    width: 70px;
+    height: 70px;
+    /* Colorful gradient for the icon bubble */
+    background: linear-gradient(135deg, #ff007f, #7f00ff);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px auto;
+    box-shadow: 0 8px 20px rgba(127, 0, 255, 0.3);
+}
+
+.icon-container i {
+    font-size: 2rem;
+    color: #ffffff; /* White icon to pop against the gradient */
+}
+
+/* 5. Typography */
+h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #2b1055; /* Deep rich dark purple instead of boring black */
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 0.95rem;
+    color: #6b5b95; /* Elegant purple-toned grey */
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* 6. Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Input Group with dynamic focus */
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group i {
+    position: absolute;
+    left: 18px;
+    color: #7f00ff; /* Purple icon */
+    font-size: 1.1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px; /* Fully rounded pill shape */
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Glow ring on input focus */
+.input-group input:focus {
+    border-color: #7f00ff;
+    box-shadow: 0 0 10px rgba(127, 0, 255, 0.2);
+}
+
+/* 7. Vivid Action Button */
+button {
+    background: linear-gradient(135deg, #ff007f, #7f00ff);
+    color: white;
+    border: none;
+    border-radius: 30px; /* Matching the rounded pill input */
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 20px rgba(255, 0, 127, 0.25);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0 12px 25px rgba(255, 0, 127, 0.4);
+    transform: scale(1.02); /* Slight grow effect on hover */
+}
+
+/* 8. Benefits List */
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+    border-top: 2px dashed #f0f0f5; /* Fun dashed divider */
+    padding-top: 25px;
+}
+
+.benefit-item {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+}
+
+.benefit-item i {
+    color: #00dfa2; /* Radiant neon-green checkmark */
+    font-size: 1.1rem;
+}
