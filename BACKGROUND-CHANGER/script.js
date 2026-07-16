@@ -1,34 +1,74 @@
-const red=document.getElementById("red")
-const blue=document.getElementById("blue")
-const orange=document.getElementById("orange")
-const green=document.getElementById("green")
-const pink=document.getElementById("pink")
-const purple=document.getElementById("purple")
-const yellow=document.getElementById("yellow")
-const violet=document.getElementById("violet")
+const red=document.getElementById("red");
+const blue=document.getElementById("blue");
+const orange=document.getElementById("orange");
+const green=document.getElementById("green");
+const pink=document.getElementById("pink");
+const purple=document.getElementById("purple");
+const yellow=document.getElementById("yellow");
+const violet=document.getElementById("violet");
+const teal=document.getElementById("teal");
+const coral=document.getElementById("coral");
+const lavender=document.getElementById("lavender");
+const indigo=document.getElementById("indigo");
+const mint=document.getElementById("mint");
+const plum=document.getElementById("plum");
+const peach=document.getElementById("peach");
 
+red.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#ef233c";
+});
 
-red.addEventListener("click", () => {
-    document.body.style.backgroundColor = "#c1121f";
+blue.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#219ebc";
 });
-blue.addEventListener("click", () => {
-    document.body.style.backgroundColor = "#219ebc";
+
+orange.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#ffb703";
 });
-orange.addEventListener("click", () => {
-    document.body.style.backgroundColor = "#fb8500";
+
+green.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#52b788";
 });
-green.addEventListener("click", () => {
-    document.body.style.backgroundColor = "#a7c957";
+
+pink.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#ff85a1";
 });
-pink.addEventListener("click", () => {
-    document.body.style.backgroundColor = "#ffafcc";
+
+purple.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#8338ec";
 });
-purple.addEventListener("click", () => {
-    document.body.style.backgroundColor = "purple";
+
+yellow.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#ffd166";
 });
-yellow.addEventListener("click", () => {
-    document.body.style.backgroundColor = "#ffd60a";
+
+violet.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#c77dff";
 });
-violet.addEventListener("click", () => {
-    document.body.style.backgroundColor = "#8338ec";
+
+teal.addEventListener("click",()=>{
+    document.body.style.backgroundColor = "#06b6d4";
+});
+
+coral.addEventListener("click",() =>{
+    document.body.style.backgroundColor="#ff7096";
+});
+
+lavender.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#a2d2ff";
+});
+indigo.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#4361ee";
+});
+
+mint.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#2ec4b6";
+});
+
+plum.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#5c0632";
+});
+
+peach.addEventListener("click",()=>{
+    document.body.style.backgroundColor="#fbc4ab";
 });

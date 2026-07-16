@@ -1,72 +1,137 @@
-*{
-    margin:0;
-    padding:0;
+/* --- 1. General Setup & Reset --- */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #0f172a; /* Default dark background */
+    color: #ffffff;
     display: flex;
-    flex-direction:row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    gap: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    padding: 40px 20px;
+    /* Smooth 0.5-second transition when changing background colors */
+    transition: background-color 0.5s ease; 
 }
-.box{
-    height:200px;
-    width:200px;
+
+/* --- 2. Floating Header Area --- */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.page-header p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 3. Flex/Grid Container --- */
+.palette-grid {
+    display: grid;
+    /* Responsive auto-fit grid using clean, basic rules */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* --- 4. The Color Cards --- */
+.box {
+    height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor:pointer;
-    border-radius:30px;
+    cursor: pointer;
+    border-radius: 20px;
     color: white;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Simple hover transitions */
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
 }
-#red{
-    background-color: #c1121f;
+
+/* Elegant Hover effects */
+.box:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
 }
-#red:hover{
-    background-color:rgb(158, 35, 35);
-}
-#blue{
-    background-color:#219ebc;
-}
-#blue:hover{
-    background-color:rgb(23, 99, 125);
-}
-#orange{
-    background-color: #fb8500;
-}
-#orange:hover{
-    background-color:rgb(153, 105, 18);
-}
-#green{
-    background-color:#a7c957;
-}
-#green:hover{
-    background-color:rgb(93, 129, 40);
-}
-#pink{
-    background-color: #ffafcc;
-}
-#pink:hover{
-    background-color: rgb(185, 85, 100);
-}
-#purple{
-    background-color: purple;
-}
-#purple:hover{
-    background-color:rgb(73, 26, 73);
-}
-#yellow{
-    background-color: #ffd60a;
-}
-#yellow:hover{
-    background-color:rgb(138, 138, 37);
-}
-#violet{
-    background-color:#8338ec;
-}
-#violet:hover{
-    background-color: rgb(133, 50, 133);
+
+/* --- 5. Individual Color Backgrounds & Hover States --- */
+#red { background-color: #ef233c; }
+#red:hover { background-color: #d90429; }
+
+#blue { background-color: #219ebc; }
+#blue:hover { background-color: #023047; }
+
+#orange { background-color: #ffb703; }
+#orange:hover { background-color: #fb8500; }
+
+#green { background-color: #52b788; }
+#green:hover { background-color: #2d6a4f; }
+
+#pink { background-color: #ff85a1; }
+#pink:hover { background-color: #ff477e; }
+
+#purple { background-color: #8338ec; }
+#purple:hover { background-color: #6a1b9a; }
+
+#yellow { background-color: #ffd166; }
+#yellow:hover { background-color: #fca31d; }
+
+#violet { background-color: #c77dff; }
+#violet:hover { background-color: #9d4edd; }
+
+/* New Colors: */
+#teal { background-color: #06b6d4; }
+#teal:hover { background-color: #0891b2; }
+
+#coral { background-color: #ff7096; }
+#coral:hover { background-color: #ff477e; }
+
+#lavender { background-color: #a2d2ff; }
+#lavender:hover { background-color: #bdb2ff; }
+
+#indigo { background-color: #4361ee; }
+#indigo:hover { background-color: #3f37c9; }
+
+#mint { background-color: #2ec4b6; }
+#mint:hover { background-color: #0cb0a0; }
+
+#plum { background-color: #5c0632; }
+#plum:hover { background-color: #400221; }
+
+#peach { background-color: #fbc4ab; color: #333333; /* Dark text for light background */ }
+#peach:hover { background-color: #f8ad9d; }
+
+
+/* --- 6. Media Queries for Small Phones --- */
+@media (max-width: 480px) {
+    .palette-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+        gap: 15px;
+    }
+    
+    .box {
+        height: 110px;
+    }
 }
