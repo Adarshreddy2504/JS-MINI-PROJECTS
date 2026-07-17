@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #080b11;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.blob{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.45;
+    animation: float 12s infinite alternate ease-in-out;
+}
+
+.blob-1{
+    width: 350px;
+    height: 350px;
+    background: #8b5cf6;
+    top: -10%;
+    left: -5%;
+}
+
+.blob-2{
+    width: 450px;
+    height: 450px;
+    background: #ec4899;
+    bottom: -15%;
+    right: -10%;
+    animation-delay: 2s;
+}
+
+.blob-3{
+    width: 250px;
+    height: 250px;
+    background: #06b6d4;
+    top: 50%;
+    left: 70%;
+    animation-delay: 4s;
+}
+
+@keyframes float{
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(40px, -40px) scale(1.1); }
+}
+
+.container{
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    z-index: 1; /* Pushes content in front of background blobs */
+}
+
+.logo{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.logo-icon{
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-icon i{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.hero{
+    margin-bottom: 40px;
+}
+
+.badge{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.pulse{
+    width: 8px;
+    height: 8px;
+    background-color: #10b981;
+    border-radius: 50%;
+    position: relative;
+}
+.pulse::after {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #10b981;
+    animation: ping 1.5s infinite;
+}
+
+@keyframes ping{
+    0%{ transform: scale(1); opacity: 0.8;}
+    100% { transform: scale(2.5); opacity: 0;}
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.hero p{
+    font-size: 16px;
+    color: #9ca3af;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.countdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.time-block{
+    background-color: rgba(22, 28, 45, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 15px;
+    width: 80px
+}
+
+.time-value{
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.time-label{
+    display: block;
+    font-size: 11px;
+    color: #9ca3af;
+    text-transform: uppercase;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+}
+
+.seperator{
+    font-size: 24px;
+    color: #4b5563;
+    font-weight: bold;
+}
+
+.email-form{
+    display: flex;
+    gap: 12px;
+    max-width: 480px;
+    margin: 0 auto 20px auto;
+}
+
+.input-group{
+    position: relative;
+    flex-grow: 1;
+}
+
+.input-group i{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+}
+
+.input-group input{
+    width: 100%;
+    padding: 14px 15px 14px 45px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-group input::placeholder{
+    color: #6b7280;
+}
+
+.input-group input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.25);
+}
+.email-form button{
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    border: none;
+    color: #ffffff;
+    padding: 0 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.email-form button:hover{
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.email-form button i{
+    font-size: 13px;
+    transition: transform 0.2s;
+}
+
+.email-form button:hover i {
+    transform: translateX(4px);
+}
+.success-message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #10b981;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 10px;
+    padding: 14px;
+    max-width: 480px;
+    margin: 0 auto 20px auto;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.socials a{
+    color: #6b7280;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.socials a:hover{
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+@media(max-width: 600px){
+    .hero h1{
+        font-size: 32px;
+    }
+    .countdown{
+        gap: 8px;
+    }
+    .time-block{
+        width: 70px;
+        padding: 10px;
+    }
+    .time-value{
+        font-size: 22px;
+    }
+    .email-form{
+        flex-direction: column;
+    }
+    .email-form button{
+        padding: 14px;
+        justify-content: center;
+    }
+}
