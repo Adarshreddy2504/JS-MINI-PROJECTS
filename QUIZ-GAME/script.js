@@ -70,6 +70,132 @@ const quizQuestions=[
             {text: "Nile" , correct:true},
             {text:"Mississippi" , correct:false},
         ]
+    },
+    {
+        question:"Who invented JavaScript?",
+        answers:[
+            {text:"Brendan Eich",correct:true},
+            {text:"James Gosling",correct:false},
+            {text:"Guido van Rossum",correct:false},
+            {text:"Dennis Ritchie",correct:false},
+        ]
+    },
+    {
+        question:"Which HTML tag is used to insert an image?",
+        answers:[
+            {text:"<image>",correct:false},
+            {text:"<img>",correct:true},
+            {text:"<src>",correct:false},
+            {text:"<picture>",correct:false},
+        ]
+    },
+    {
+        question:"Which language is used for styling web pages?",
+        answers:[
+            {text:"HTML",correct:false},
+            {text:"Python",correct:false},
+            {text:"CSS",correct:true},
+            {text:"Java",correct:false},
+        ]
+    },
+    {
+        question:"Which company developed Java?",
+        answers:[
+            {text:"Microsoft",correct:false},
+            {text:"Sun Microsystems",correct:true},
+            {text:"Google",correct:false},
+            {text:"IBM",correct:false},
+        ]
+    },
+    {
+        question:"Which planet is known as the Red Planet?",
+        answers:[
+            {text:"Mars",correct:true},
+            {text:"Jupiter",correct:false},
+            {text:"Saturn",correct:false},
+            {text:"Venus",correct:false},
+        ]
+    },
+    {
+        question:"Which is the largest mammal?",
+        answers:[
+            {text:"Elephant",correct:false},
+            {text:"Blue Whale",correct:true},
+            {text:"Giraffe",correct:false},
+            {text:"Shark",correct:false},
+        ]
+    },
+    {
+        question:"How many continents are there?",
+        answers:[
+            {text:"5",correct:false},
+            {text:"6",correct:false},
+            {text:"7",correct:true},
+            {text:"8",correct:false},
+        ]
+    },
+    {
+        question:"Which gas do plants absorb?",
+        answers:[
+            {text:"Oxygen",correct:false},
+            {text:"Nitrogen",correct:false},
+            {text:"Carbon Dioxide",correct:true},
+            {text:"Hydrogen",correct:false},
+        ]
+    },
+    {
+        question:"Which is the fastest land animal?",
+        answers:[
+            {text:"Tiger",correct:false},
+            {text:"Horse",correct:false},
+            {text:"Cheetah",correct:true},
+            {text:"Lion",correct:false},
+        ]
+    },
+    {
+        question:"Who wrote Romeo and Juliet?",
+        answers:[
+            {text:"William Shakespeare",correct:true},
+            {text:"Charles Dickens",correct:false},
+            {text:"Leo Tolstoy",correct:false},
+            {text:"Mark Twain",correct:false},
+        ]
+    },
+    {
+        question:"Which is the largest desert in the world?",
+        answers:[
+            {text:"Sahara",correct:false},
+            {text:"Antarctica",correct:true},
+            {text:"Arabian",correct:false},
+            {text:"Gobi",correct:false},
+        ]
+    },
+    {
+        question:"Which programming language runs in the browser?",
+        answers:[
+            {text:"Python",correct:false},
+            {text:"Java",correct:false},
+            {text:"JavaScript",correct:true},
+            {text:"C++",correct:false},
+        ]
+    },
+    {
+        question:"What does CSS stand for?",
+        answers:[
+            {text:"Creative Style Sheets",correct:false},
+            {text:"Computer Style Sheets",correct:false},
+            {text:"Cascading Style Sheets",correct:true},
+            {text:"Colorful Style Sheets",correct:false},
+        ]
+    },
+    {
+        question:"Which HTML element creates a hyperlink?",
+        answers:[
+            {text:"<link>",correct:false},
+            {text:"<a>",correct:true},
+            {text:"<href>",correct:false},
+            {text:"<url>",correct:false},
+        ]
     }
 ];
 

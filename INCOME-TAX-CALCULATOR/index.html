@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Income Tax Calculator</h1>
+
+        <div class="table-section">
+            <h2>Income Tax Slabs</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Annual Income (₹)</th>
+                        <th>Tax Rate</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>0 – 3,00,000</td>
+                        <td>0%</td>
+                    </tr>
+
+                    <tr>
+                        <td>3,00,001 – 6,00,000</td>
+                        <td>5%</td>
+                    </tr>
+
+                    <tr>
+                        <td>6,00,001 – 9,00,000</td>
+                        <td>10%</td>
+                    </tr>
+
+                    <tr>
+                        <td>9,00,001 – 12,00,000</td>
+                        <td>15%</td>
+                    </tr>
+
+                    <tr>
+                        <td>12,00,001 – 15,00,000</td>
+                        <td>20%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Above 15,00,000</td>
+                        <td>30%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="calculator">
+            <h2>Calculate Your Tax</h2>
+
+            <label for="income">Enter Annual Income (₹)</label>
+            <input type="number" id="income" placeholder="Enter your annual income">
+            <button id="calculateBtn">Calculate Tax</button>
+
+            <h3 id="result">Tax Amount: ₹0</h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

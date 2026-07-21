@@ -1,50 +1,95 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    min-height:100vh;
+    padding:40px 20px;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
 }
 
 .container{
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    width: 90%;
-    max-width: 500px;
+    max-width:1200px;
+    margin:auto;
 }
 
 h1{
-    text-align: center;
-    margin-bottom: 20px;
+    text-align:center;
+    color:#fff;
+    font-size:3rem;
+    margin-bottom:40px;
+    letter-spacing:1px;
 }
 
 ul{
-    list-style: none;
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
 li{
-    margin: 10px 0;
+    list-style:none;
 }
 
 a{
-    display: block;
-    text-decoration: none;
-    background-color: #4f46e5;
-    color: white;
-    padding: 12px;
-    border-radius: 5px;
-    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:80px;
+    text-decoration:none;
+    color:#fff;
+    font-size:1rem;
+    font-weight:600;
+    border-radius:12px;
+    transition:.3s;
 }
 
+li:nth-child(1) a{background:#2563eb;}
+li:nth-child(2) a{background:#8b5cf6;}
+li:nth-child(3) a{background:#06b6d4;}
+li:nth-child(4) a{background:#10b981;}
+li:nth-child(5) a{background:#f59e0b;}
+li:nth-child(6) a{background:#f97316;}
+li:nth-child(7) a{background:#ef4444;}
+li:nth-child(8) a{background:#ec4899;}
+li:nth-child(9) a{background:#14b8a6;}
+li:nth-child(10) a{background:#6366f1;}
+li:nth-child(11) a{background:#84cc16;}
+li:nth-child(12) a{background:#0891b2;}
+li:nth-child(13) a{background:#7c3aed;}
+li:nth-child(14) a{background:#dc2626;}
+li:nth-child(15) a{background:#0ea5e9;}
+li:nth-child(16) a{background:#16a34a;}
+li:nth-child(17) a{background:#ea580c;}
+li:nth-child(18) a{background:#9333ea;}
+li:nth-child(19) a{background:#e11d48;}
+li:nth-child(20) a{background:#0284c7;}
+
 a:hover{
-    background-color: #4338ca;
+    transform:translateY(-6px);
+    box-shadow:0 10px 20px rgba(0,0,0,.25);
 }
+
+@media(max-width:768px){
+    h1{
+        font-size:2.2rem;
+    }
+    ul{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+    ul{
+        grid-template-columns:1fr;
+    }
+    h1{
+        font-size:1.8rem;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
